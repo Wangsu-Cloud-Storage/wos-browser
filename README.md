@@ -8,7 +8,7 @@
 
 #### 使用说明
 ### 安装&登录
-1、下载[wos-browser.zip](http://wcsd.chinanetcenter.com/tool/wos-browser-win32-x64.zip)工具。
+1、下载[wos-browser-win32-x64.zip](http://wcsd.chinanetcenter.com/tool/wos-browser-win32-x64.zip)工具。
 
 2、解压zip后，进入目录，执行wos-browser.exe即可使用
 ![](http://wcsd.chinanetcenter.com/guide-wos-browser-pics/1.png)  
