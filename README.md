@@ -13,13 +13,13 @@
 * [mac-x64](http://wcsd.chinanetcenter.com/tool/wos-browser-darwin-x64.zip)
 
 2、解压zip后，进入目录，执行wos-browser.exe即可使用
-![222](http://wcsd.chinanetcenter.com/guide-wos-browser-pics/1.png)  
+![](http://wcsd.chinanetcenter.com/guide-wos-browser-pics/1.png)  
 
 3、填写登录信息
-![333](http://wcsd.chinanetcenter.com/guide-wos-browser-pics/22.png)  
+![](http://wcsd.chinanetcenter.com/guide-wos-browser-pics/22.png)  
 
 4、登录成功后，从展示的空间列表中选择需要管理的空间
-![444](http://wcsd.chinanetcenter.com/guide-wos-browser-pics/3.png)  
+![](http://wcsd.chinanetcenter.com/guide-wos-browser-pics/3.png)  
 
 
 ### 文件管理
