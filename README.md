@@ -11,8 +11,6 @@
 1、下载工具
 * [windows-x64](http://wcsd.chinanetcenter.com/tool/wos-browser-1.1.1-win32-x64.zip)
 * [mac-x64](http://wcsd.chinanetcenter.com/tool/wos-browser-1.1.1-darwin-x64.zip)
-* [windows-x64-适用专有云的版本](http://wcsd.chinanetcenter.com/tool/wos-browser-1.1.3-pc-win32-x64.zip)
-* [mac-x64-适用专有云的版本](http://wcsd.chinanetcenter.com/tool/wos-browser-1.1.3-pc-darwin-x64.zip)
 
 2、解压zip后，进入目录，执行wos-browser.exe即可使用
 ![](http://wcsd.chinanetcenter.com/guide-wos-browser-pics/1.png)  
