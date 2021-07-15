@@ -9,9 +9,9 @@
 #### 使用说明
 ### 安装&登录
 1、下载工具
-* [windows-x64](http://wcsd.chinanetcenter.com/tool/wos-browser-1.1.1-win32-x64.zip)
-* [mac-x64](http://wcsd.chinanetcenter.com/tool/wos-browser-1.1.1-darwin-x64.zip)
-* [linux-x64](http://wcsd.chinanetcenter.com/tool/wos-browser-1.1.1-linux-x64.zip)
+* [windows-x64](http://wcsd.chinanetcenter.com/tool/wos-browser-1.1.2-win32-x64.zip)
+* [mac-x64](http://wcsd.chinanetcenter.com/tool/wos-browser-1.1.2-darwin-x64.zip)
+* [linux-x64](http://wcsd.chinanetcenter.com/tool/wos-browser-1.1.2-linux-x64.zip)
 
 2、解压zip后，进入目录，执行wos-browser.exe即可使用
 ![](http://wcsd.chinanetcenter.com/guide-wos-browser-pics/1.png)  
@@ -37,6 +37,7 @@
 ### 版本变更记录
 |  版本   | 变更内容  |
 |  ----  | ----  |
+| 1.1.2 | 资源搜索结果支持预览|
 | 1.1.1 | 资源搜索功能调整为只在当前目录下搜索，根目录搜索等同于全局搜索|
 | 1.1.0 | 新增资源全局搜索功能|
 | 1.0.0 | 初始版本|
