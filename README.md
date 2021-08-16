@@ -9,18 +9,18 @@
 #### 使用说明
 ### 安装&登录
 1、下载工具
-* [windows-x64](http://wcsd.chinanetcenter.com/tool/wos-browser-1.1.2-win32-x64.zip)
-* [mac-x64](http://wcsd.chinanetcenter.com/tool/wos-browser-1.1.2-darwin-x64.zip)
-* [linux-x64](http://wcsd.chinanetcenter.com/tool/wos-browser-1.1.2-linux-x64.zip)
+* [windows-x64](https://s3-cn-east-5.wcsapi.com/doc-pics/tool/wos-browser-1.1.2-win32-x64.zip)
+* [mac-x64](https://s3-cn-east-5.wcsapi.com/doc-pics/tool/wos-browser-1.1.2-darwin-x64.zip)
+* [linux-x64](https://s3-cn-east-5.wcsapi.com/doc-pics/tool/wos-browser-1.1.2-linux-x64.zip)
 
 2、解压zip后，进入目录，执行wos-browser.exe即可使用
-![](http://wcsd.chinanetcenter.com/guide-wos-browser-pics/1.png)  
+![](https://s3-cn-east-5.wcsapi.com/doc-pics/guide-wos-browser-pics/1.png)  
 
 3、填写登录信息
-![](http://wcsd.chinanetcenter.com/guide-wos-browser-pics/22.png)  
+![](https://s3-cn-east-5.wcsapi.com/doc-pics/guide-wos-browser-pics/22.png)  
 
 4、登录成功后，从展示的空间列表中选择需要管理的空间
-![](http://wcsd.chinanetcenter.com/guide-wos-browser-pics/3.png)  
+![](https://s3-cn-east-5.wcsapi.com/doc-pics/guide-wos-browser-pics/3.png)  
 
 
 ### 文件管理
@@ -30,7 +30,7 @@
 
 3、支持文件夹的移动、重命名、删除等操作。
 注：Mac版本没有上传目录按钮，选择目录即可上传整个目录的文件
-![](http://wcsd.chinanetcenter.com/guide-wos-browser-pics/4.png)  
+![](https://s3-cn-east-5.wcsapi.com/doc-pics/guide-wos-browser-pics/4.png)  
 
 4、文件搜索，支持模糊搜索空间内文件名匹配指定内容的文件
 
