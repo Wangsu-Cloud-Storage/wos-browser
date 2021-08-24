@@ -17,7 +17,8 @@
 ![](https://s3-cn-east-5.wcsapi.com/doc-pics/guide-wos-browser-pics/1.png)  
 
 3、填写登录信息
-注：endpoint、regionName信息可到网宿对象存储控制台空间概览中获取
+
+*注：endpoint、regionName信息可到网宿对象存储控制台空间概览中获取*
 ![](https://s3-cn-east-5.wcsapi.com/doc-pics/guide-wos-browser-pics/22.png)  
 
 4、登录成功后，从展示的空间列表中选择需要管理的空间
