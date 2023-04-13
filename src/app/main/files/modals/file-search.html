@@ -1,0 +1,57 @@
+
+  <div class="modal-header">
+    <button type="button" class="close" ng-click="cancel()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">
+        <i class="fa fa-search"></i>
+      {{'files.regex.search'|translate}}
+      <!-- 资源搜索 -->
+    </h4>
+  </div>
+
+  <div class="modal-body">
+
+      <div class="form-group">
+      <div class="col-sm-9">
+          <input type="text" ng-model="searchObjectName"  class="form-control"
+                 cleanable-input>
+      </div>
+
+      <div class="col-sm-3">
+          <button style="width: 100px;" ng-disabled="isSearching" type="button" class="btn btn-default btn-lm" ng-click="doFileSearch()">
+              <!-- 搜索 -->
+              {{'search'|translate}}
+          </button>
+      </div>
+      </div>
+      <div class="clearfix">&nbsp;</div>
+      <div class="form-group">
+    <div no-data ng-if="!items || items.length==0"> </div>
+    <table ng-if="items.length>0" style="height:435px;overflow-y:auto; display: block;" class="table table-condensed table-striped">
+       <tr>
+           <th width="600px">{{'file.name'|translate}}</th>
+           <th width="100px">{{'file.size'|translate}}</th>
+           <th width="200px">{{'update.time'|translate}}</th>
+       </tr>
+       <tr ng-repeat="item in items">
+         <td style="cursor:pointer;">
+             <a ng-click="showPreview(item);$event.stopPropagation()">{{item.path}}</a>
+         </td>
+         <td>{{item.size|sizeFormat}}</td>
+         <td>{{item.lastModified|timeFormat}}</td>
+       </tr>
+    </table>
+      </div>
+
+  </div>
+  <div class="modal-footer" style="text-align: center;">
+      <!--加载更多-->
+      <a ng-if="isTruncated && !isEnd && !isSearching" href="" ng-click="nextPage()">{{'more.loading'|translate}}</a>
+
+      <!--正在载入-->
+      <span ng-if="isSearching" href="">{{'loading'|translate}}</span>
+
+      <!--没有数据-->
+      <span ng-if="isEnd" href="">&nbsp;</span>
+  </div>

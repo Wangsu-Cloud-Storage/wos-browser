@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "package_url": "https://github.com/Wangsu-Cloud-Storage/wos-browser/",
+  "package_urls": [
+    "https://github.com/Wangsu-Cloud-Storage/wos-browser/"
+  ],
+  "files": ["app.asar"]
+}
