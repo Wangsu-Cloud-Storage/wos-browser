@@ -44,3 +44,40 @@
 | 1.1.1 | 资源搜索功能调整为只在当前目录下搜索，根目录搜索等同于全局搜索|
 | 1.1.0 | 新增资源全局搜索功能|
 | 1.0.0 | 初始版本|
+
+### 关于源码
+如果您要基源码开发，请按照以下步骤进行。
+
+(1) 安装 node.js 最新版本
+```
+官网: https://nodejs.org/
+```
+
+(2) 安装 cnpm
+```
+官网: https://cnpmjs.org/
+cnpm 是 npm（node 包管理工具）的中国镜像，可以提高下载依赖包的效率。
+```
+
+(3) 如果使用 windows 系统，需要安装下列软件：
+* 需要安装 windows-build-tools:
+```
+cnpm i -g windows-build-tools
+```
+* 还需要下载 make.exe，放到 C:\windows\ 目录下
+
+(4) 下载代码并且安装依赖:
+```
+make i
+```
+(5) 运行
+```
+make run  # 开发模式运行, command+option+i 可用打开调试界面, win或linux按 F12.
+开发模式下，会自动监听源码,如有修改,会自动 build 前端代码到 dist 目录。
+```
+
+(6) 打包
+```
+make build  # build前端代码到dist目录
+make win64  # 打包win64程序， 可选: mac, linux64,linux32,win32,win64,all.
+```
