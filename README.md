@@ -67,6 +67,7 @@ cnpm i -g windows-build-tools
 * 还需要下载 make.exe，放到 C:\windows\ 目录下
 
 [make.exe（64位）](https://s3-cn-east-5.wcsapi.com/doc-pics/tool/make-x64.zip)
+
 [make.exe（32位）](https://s3-cn-east-5.wcsapi.com/doc-pics/tool/make-x32.zip)
 
 (4) 下载代码并且安装依赖:
