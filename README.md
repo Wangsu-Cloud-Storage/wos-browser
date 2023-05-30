@@ -39,6 +39,7 @@
 
 ### 日志
 1、可在设置中设置开启日志文件存储到本地系统，以及开启info级别日志。
+
 2、开启后日志默认存储在`C:\Users\xxx\AppData\Roaming\wos-browser\log.log`下。
 
 ### 版本变更记录
