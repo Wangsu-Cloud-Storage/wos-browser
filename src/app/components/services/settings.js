@@ -108,6 +108,14 @@ angular.module('web')
         set: function (v) {
           return localStorage.setItem('uploadAndDownloadRetryTimes', v);
         }
+      },
+      dnsStyle: {
+        get: function () {
+          return parseInt(localStorage.getItem('dnsStyle') || 1);
+        },
+        set: function (v) {
+          return localStorage.setItem('dnsStyle', v);
+        }
       }
     };
   }]);

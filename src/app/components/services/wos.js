@@ -1,6 +1,6 @@
 angular.module('web')
-  .factory('wos', ['$q', '$rootScope', '$timeout', '$state', 'Toast', 'Const', 'AuthInfo',
-    function ($q, $rootScope, $timeout, $state, Toast, Const, AuthInfo,) {
+  .factory('wos', ['$q', '$rootScope', '$timeout', '$state', 'Toast', 'Const', 'AuthInfo','settingsSvs',
+    function ($q, $rootScope, $timeout, $state, Toast, Const, AuthInfo,settingsSvs,) {
       var NEXT_TICK = 1;
 
       var DEF_ADDR = 'wos://';
@@ -1567,7 +1567,12 @@ angular.module('web')
 
         // var client = new ALY.WOS(options);
 
-        AWS.config.update({accessKeyId: options.accessKeyId,secretAccessKey: options.secretAccessKey,endpoint:options.endpoint,region:options.region});
+        var style = settingsSvs.dnsStyle.get();
+        if(style == 1){
+          AWS.config.update({accessKeyId: options.accessKeyId,secretAccessKey: options.secretAccessKey,endpoint:options.endpoint,region:options.region,s3ForcePathStyle: false});
+        }else{
+          AWS.config.update({accessKeyId: options.accessKeyId,secretAccessKey: options.secretAccessKey,endpoint:options.endpoint,region:options.region,s3ForcePathStyle: true});
+        }
         var client = new AWS.S3({apiVersion: '2006-03-01',customUserAgent:'wos-browser-win32-x64-v1.0.0',s3DisableBodySigning:false});
         return client;
       }

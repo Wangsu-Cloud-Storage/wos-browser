@@ -26,6 +26,32 @@ angular.module('web')
           localStorage.setItem('transVisible', f);
         },
 
+        sortTime: function (desc) {
+          $scope.showNameOrder = false;
+          $scope.showTimeOrder = true;
+          if($scope.firstIn){
+            $scope.firstIn = false
+          }
+          if(desc){
+            $scope.colArray = ['-itemType', '-lastModified'];
+          }else{
+            $scope.colArray = ['-itemType', 'lastModified'];
+          }
+          $scope.timeDesc = desc
+        },
+
+        sortName: function (desc) {
+          $scope.showNameOrder = true;
+          $scope.showTimeOrder = false;
+          if(desc){
+            $scope.colArray = ['-itemType', '-name'];
+          }else{
+            $scope.colArray = ['-itemType', 'name'];
+          }
+          $scope.nameDesc = desc
+        },
+
+
         //object 相关
         showAddFolder: showAddFolder,
         showDeleteFiles: showDeleteFiles,
@@ -132,6 +158,11 @@ angular.module('web')
           }]
         ]
       }
+      $scope.colArray = ['-itemType','name'];//默认按itemType、name列排序
+      $scope.timeDesc = false;//默认排序条件升序
+      $scope.nameDesc = false;//默认排序条件升序
+      $scope.showNameOrder = true;
+      $scope.showTimeOrder = false;
       $scope.fileSpacerMenuOptions = $scope.fileSpacerMenuOptions.concat([
         [ function(){
              return '<i class="glyphicon glyphicon-plus text-success"></i> ' + T('folder.create')

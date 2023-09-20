@@ -670,7 +670,10 @@ UploadJob.prototype.uploadMultipart = function (checkPoints) {
 
   function complete() {
     console.info("Completing upload..., uploadId: ", checkPoints.uploadId);
-
+    if(isLog == 1 && isLogInfo == 1) {
+      log.transports.file.level = 'info';
+      log.info(`[${self.to.bucket}] ---- Completing uploadMultipart ${self.from.path} as  ${self.to.key} succeeded!`);
+    }
     //防止多次complete
     if(self._hasCallComplete){
       //console.log('多次提交')

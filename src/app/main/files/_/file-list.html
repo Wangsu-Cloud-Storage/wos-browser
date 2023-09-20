@@ -9,18 +9,38 @@
         <th width="40" class="text-center">
           <input type="checkbox" ng-model="sel.all" name="x-all" ng-click="selectAll()" />
         </th>
-        <th>
+        <th ng-if="nameDesc" ng-click="sortName(false)">
           <!-- 名称 -->
-          {{'name'|translate}}
+          <div class="angle_div">
+            <span>{{'name'|translate}}</span>
+            <i ng-if="showNameOrder" class="angle_top"></i>
+          </div>
+        </th>
+        <th ng-if="!nameDesc" ng-click="sortName(true)">
+          <!-- 名称 -->
+          <div class="angle_div">
+            <span>{{'name'|translate}}</span>
+            <i ng-if="showNameOrder" class="angle_bottom"></i>
+          </div>
         </th>
         <th>
           <!-- 大小 -->
           {{'type'|translate}} /
           {{'size'|translate}}
         </th>
-        <th>
+        <th ng-if="timeDesc" ng-click="sortTime(false)">
           <!-- 最后修改时间 -->
-          {{'lastModifyTime'|translate}}
+          <div class="angle_div">
+            <span>{{'lastModifyTime'|translate}}</span>
+            <i ng-if="showTimeOrder" class="angle_top"></i>
+          </div>
+        </th>
+        <th ng-if="!timeDesc" ng-click="sortTime(true)">
+          <!-- 最后修改时间 -->
+          <div class="angle_div">
+            <span>{{'lastModifyTime'|translate}}</span>
+            <i ng-if="showTimeOrder" class="angle_bottom"></i>
+          </div>
         </th>
         <th class="text-right">
           <!-- 操作 -->
@@ -28,7 +48,7 @@
           &nbsp;</th>
       </tr>
       <!--|filter:{name:sch.objectName}-->
-      <tr ng-repeat="item in objects"
+      <tr ng-repeat="item in objects|orderBy:colArray"
        context-menu="fileMenuOptions(item, $index)" 
        ng-click="sel.x['i_'+$index]=!sel.x['i_'+$index];selectChanged($event,$index);"
        ng-class="{'info': sel.x['i_'+$index]}">

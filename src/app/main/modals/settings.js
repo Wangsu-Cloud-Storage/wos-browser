@@ -17,8 +17,19 @@ angular.module('web')
         logFileInfo: settingsSvs.logFileInfo.get(),
         connectTimeout: settingsSvs.connectTimeout.get(),
         uploadPartSize: settingsSvs.uploadPartSize.get(),
-        uploadAndDownloadRetryTimes: settingsSvs.uploadAndDownloadRetryTimes.get()
+        uploadAndDownloadRetryTimes: settingsSvs.uploadAndDownloadRetryTimes.get(),
+        dnsStyle:settingsSvs.dnsStyle.get()
       },
+      dns:[
+        {
+          text:"http://%(bucket).endpoint/%(key)",
+          key:1
+        },
+        {
+          text:"http://endpoint/%(bucket)/%(key) ",
+          key:2
+        }
+      ],
       reg: {
         email: Const.REG.EMAIL
       },
