@@ -22,7 +22,7 @@ module.exports= {
   //logo ico 格式，主要用于windows系统
   logo_ico: path.join(__dirname, './icon.ico'),
 
-    version: '1.1.5',
+    version: '1.1.6',
 
   //“关于”弹窗的主要内容
   //about_html: '<div>开源地址:</div>',

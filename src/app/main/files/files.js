@@ -32,6 +32,7 @@ angular.module('web')
           if($scope.firstIn){
             $scope.firstIn = false
           }
+          $scope.objects.sort($scope.sortByTime(desc))
           if(desc){
             $scope.colArray = ['-itemType', '-lastModified'];
           }else{
@@ -43,12 +44,73 @@ angular.module('web')
         sortName: function (desc) {
           $scope.showNameOrder = true;
           $scope.showTimeOrder = false;
+          $scope.objects.sort($scope.sortByName(desc))
           if(desc){
             $scope.colArray = ['-itemType', '-name'];
           }else{
             $scope.colArray = ['-itemType', 'name'];
           }
           $scope.nameDesc = desc
+        },
+        sortByName: function (desc) {
+          if(desc){
+            return (x, y) => {
+              if(x["isFolder"]){
+                return 0;
+              }
+              if(y["name"].toLowerCase() > x["name"].toLowerCase()) {
+                return 1
+              }else if (y["name"].toLowerCase() == x["name"].toLowerCase()){
+                return 0
+              }else{
+                return -1;
+              }
+            }
+          }else{
+            return (x, y) => {
+              if(x["isFolder"]){
+                return 0;
+              }
+              if(y["name"].toLowerCase() < x["name"].toLowerCase()) {
+                return 1
+              }else if (y["name"].toLowerCase() == x["name"].toLowerCase()){
+                return 0
+              }else{
+                return -1;
+              }
+            }
+          }
+
+        },
+        sortByTime: function (desc) {
+          if(desc){
+            return (x, y) => {
+              if(x["isFolder"]){
+                return 0;
+              }
+              if(y["lastModified"] > x["lastModified"]) {
+                return 1
+              }else if (y["lastModified"] == x["lastModified"]){
+                return 0
+              }else{
+                return -1;
+              }
+            }
+          }else{
+            return (x, y) => {
+              if(x["isFolder"]){
+                return 0;
+              }
+              if(y["lastModified"] < x["lastModified"]) {
+                return 1
+              }else if (y["lastModified"] == x["lastModified"]){
+                return 0
+              }else{
+                return -1;
+              }
+            }
+          }
+
         },
 
 
