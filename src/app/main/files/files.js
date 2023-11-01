@@ -29,28 +29,35 @@ angular.module('web')
         sortTime: function (desc) {
           $scope.showNameOrder = false;
           $scope.showTimeOrder = true;
-          if($scope.firstIn){
-            $scope.firstIn = false
-          }
+          // if($scope.firstIn){
+          //   $scope.firstIn = false
+          // }
           $scope.objects.sort($scope.sortByTime(desc))
+          initSelect();
           if(desc){
             $scope.colArray = ['-itemType', '-lastModified'];
           }else{
             $scope.colArray = ['-itemType', 'lastModified'];
           }
           $scope.timeDesc = desc
+          safeApply($scope)
         },
 
         sortName: function (desc) {
           $scope.showNameOrder = true;
           $scope.showTimeOrder = false;
+            // if($scope.firstIn){
+            //     $scope.firstIn = false
+            // }
           $scope.objects.sort($scope.sortByName(desc))
+          initSelect();
           if(desc){
             $scope.colArray = ['-itemType', '-name'];
           }else{
             $scope.colArray = ['-itemType', 'name'];
           }
           $scope.nameDesc = desc
+          safeApply($scope)
         },
         sortByName: function (desc) {
           if(desc){
@@ -220,10 +227,10 @@ angular.module('web')
           }]
         ]
       }
-      $scope.colArray = ['-itemType','name'];//默认按itemType、name列排序
+      $scope.colArray = [];//默认按itemType、name列排序
       $scope.timeDesc = false;//默认排序条件升序
       $scope.nameDesc = false;//默认排序条件升序
-      $scope.showNameOrder = true;
+      $scope.showNameOrder = false;
       $scope.showTimeOrder = false;
       $scope.fileSpacerMenuOptions = $scope.fileSpacerMenuOptions.concat([
         [ function(){
@@ -494,6 +501,9 @@ angular.module('web')
           }
 
           $scope.currentInfo = info;
+          $scope.colArray = []
+          $scope.showNameOrder = false;
+          $scope.showTimeOrder = false;
 
           if (info.bucket) {
 
