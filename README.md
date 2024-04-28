@@ -9,8 +9,8 @@
 #### 使用说明
 ### 安装&登录
 1、下载工具
-* [windows-x64](https://s3-cn-east-5.wcsapi.com/doc-pics/tool/wos-browser-1.1.5-win32-x64.zip)
-* [mac-x64](https://s3-cn-east-5.wcsapi.com/doc-pics/tool/wos-browser-1.1.2-darwin-x64.zip)
+* [windows-x64](https://s3-cn-east-5.wcsapi.com/doc-pics/tool/wos-browser-1.1.6-win32-x64.zip)
+* [mac-x64](https://s3-cn-east-5.wcsapi.com/doc-pics/tool/wos-browser-1.1.6-darwin-x64.zip)
 * [linux-x64](https://s3-cn-east-5.wcsapi.com/doc-pics/tool/wos-browser-1.1.2-linux-x64.zip)
 
 2、解压zip后，进入目录，执行wos-browser.exe即可使用
@@ -45,6 +45,7 @@
 ### 版本变更记录
 |  版本   | 变更内容  |
 |  ----  | ----  |
+| 1.1.6 | 修复文件排序问题 |
 | 1.1.5 | 1、支持自定义DNS-style，如需要使用自定义endpoint，可以选择http://endpoint/%(bucket)/%(key)格式的dns-style，确保域名的解析正确 <br>2、支持“最后修改时间”排序|
 | 1.1.3 | 完善info操作日志|
 | 1.1.2 | 资源搜索结果支持预览|
