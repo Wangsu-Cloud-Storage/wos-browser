@@ -11,7 +11,7 @@ var DownloadJob = require('./download-job');
 
 function getClient(opt) {
   AWS.config.update({accessKeyId: opt.accessKeyId, secretAccessKey: opt.secretAccessKey, endpoint:opt.endpoint, region:opt.region});
-  var client = new AWS.S3({apiVersion: '2006-03-01',customUserAgent:'wos-browser-win32-x64-v1.0.0'});
+  var client = new AWS.S3({apiVersion: '2006-03-01',customUserAgent:'wos-browser-win32-x64-v1.1.6'});
   return client;
 }
 /**

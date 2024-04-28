@@ -1573,7 +1573,7 @@ angular.module('web')
         }else{
           AWS.config.update({accessKeyId: options.accessKeyId,secretAccessKey: options.secretAccessKey,endpoint:options.endpoint,region:options.region,s3ForcePathStyle: true});
         }
-        var client = new AWS.S3({apiVersion: '2006-03-01',customUserAgent:'wos-browser-win32-x64-v1.0.0',s3DisableBodySigning:false});
+        var client = new AWS.S3({apiVersion: '2006-03-01',customUserAgent:'wos-browser-win32-x64-v1.1.6',s3DisableBodySigning:false});
         return client;
       }
 
